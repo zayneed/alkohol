@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alter Überprüfung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fullscreen Overlay -->
+    <div id="overlay">
+        <h1>Finden Sie jetzt Ihr Alter heraus</h1>
+        <button id="enterButton">Jetzt starten</button>
+    </div>
+
+<!-- Main Content -->
+<div class="content">
+    <div class="form-control">
+        <input type="number" id="ageInput" required placeholder="Alter">
+        <label>
+            <span style="transition-delay:0ms">A</span><span style="transition-delay:50ms">l</span><span style="transition-delay:100ms">t</span><span style="transition-delay:150ms">e</span><span style="transition-delay:200ms">r</span>
+        </label>
+    </div>
+    <button class="btn" onclick="checkAge()">Überprüfen</button>
+    <div class="message" id="resultMessage"></div>
+</div>
+
+<!-- Modal -->
+<div id="ageModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>cool du bist über 18</p>
+    </div>
+</div>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
