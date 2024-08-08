@@ -28,17 +28,98 @@ document.addEventListener("DOMContentLoaded", function() {
 function checkAge() {
     const age = parseInt(document.getElementById('ageInput').value);
     const resultMessage = document.getElementById('resultMessage');
-    const ageModal = document.getElementById('ageModal');
+    const ageCards = document.getElementById('ageCards');
+
+    // Clear any existing cards
+    ageCards.innerHTML = '';
 
     if (isNaN(age)) {
         resultMessage.textContent = 'Bitte gib ein gültiges Alter ein.';
         resultMessage.style.color = 'red';
+
+    } else if (age >= 400) {
+        resultMessage.textContent = 'fick dich';
+        resultMessage.style.color = 'green';
+        // Add cards for age 20 and older
+        const card = document.createElement('div');
+        card.className = 'age-card';
+        card.textContent = 'nah das crazy';
+        ageCards.appendChild(card);
+
+    } else if (age >= 120) {
+        resultMessage.textContent = 'halts maul';
+        resultMessage.style.color = 'red';
+        // Add cards for age 20 and older
+        const card = document.createElement('div');
+        card.className = 'age-card';
+        card.textContent = 'nahhh';
+        ageCards.appendChild(card);
+
+    } else if (age >= 100) {
+        resultMessage.textContent = 'du bist ein lügner';
+        resultMessage.style.color = 'red';
+        // Add cards for age 20 and older
+        const card = document.createElement('div');
+        card.className = 'age-card';
+        card.textContent = 'das ist bigcap';
+        ageCards.appendChild(card);
+
+    } else if (age >= 80) {
+        resultMessage.textContent = 'Du bist zu alt Jahre alt oder älter.';
+        resultMessage.style.color = 'green';
+        // Add cards for age 20 and older
+        const card = document.createElement('div');
+        card.className = 'age-card';
+        card.textContent = 'du rentner';
+        ageCards.appendChild(card);
+
+    } else if (age >= 60) {
+        resultMessage.textContent = 'Du bist 60 Jahre alt oder älter.';
+        resultMessage.style.color = 'blue';
+        // Add cards for age 20 and older
+        const card = document.createElement('div');
+        card.className = 'age-card';
+        card.textContent = 'du bist ein chilliger homie props';
+        ageCards.appendChild(card);
+
+    } else if (age >= 50) {
+        resultMessage.textContent = 'Du bist 50 Jahre alt oder älter.';
+        resultMessage.style.color = 'green';
+        // Add cards for age 20 and older
+        const card = document.createElement('div');
+        card.className = 'age-card';
+        card.textContent = 'bitte geh nie wieder auf diese website';
+        ageCards.appendChild(card);
+
+    } else if (age >= 30) {
+        resultMessage.textContent = 'Du bist 30 Jahre alt oder älter.';
+        resultMessage.style.color = 'green';
+        // Add cards for age 20 and older
+        const card = document.createElement('div');
+        card.className = 'age-card';
+        card.textContent = 'Du bist zu alt um mit 15-Jährigen zusammen zu sein';
+        ageCards.appendChild(card);
+
+    } else if (age >= 20) {
+        resultMessage.textContent = 'Du bist 20 Jahre alt oder älter.';
+        resultMessage.style.color = 'green';
+        // Add cards for age 20 and older
+        const card = document.createElement('div');
+        card.className = 'age-card';
+        card.textContent = 'Du bist ein alter Sack';
+        ageCards.appendChild(card);
+
     } else if (age >= 18) {
         resultMessage.textContent = 'Du bist 18 Jahre alt oder älter.';
         resultMessage.style.color = 'green';
-        ageModal.style.display = 'block'; // Zeigt das Modal an
+        // Add a card for age 18 to 19
+        const card = document.createElement('div');
+        card.className = 'age-card';
+        card.textContent = 'Cool, du bist über 18!';
+        ageCards.appendChild(card);
+
     } else {
-        resultMessage.textContent = 'Du bist unter 18 Jahre alt. Du bist zu jung für diese Website';
+        resultMessage.textContent = 'Du bist unter 18 Jahre alt. Du bist zu jung für diese Website.';
         resultMessage.style.color = 'red';
     }
 }

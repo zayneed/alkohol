@@ -180,3 +180,24 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+
+
+.age-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.age-card {
+    background-color: #00274d; /* Sehr dunkles Blau */
+    border: 1px solid #4a79fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    color: #fff;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    font-size: 1.2rem;
+}
