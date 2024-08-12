@@ -118,6 +118,25 @@ function checkAge() {
         card.textContent = 'Cool, du bist über 18!';
         ageCards.appendChild(card);
 
+    } else if (age >= 1) {
+        resultMessage.textContent = 'du bist zu jung';
+        resultMessage.style.color = 'green';
+        // Add a card for age 18 to 19
+        const card = document.createElement('div');
+        card.className = 'age-card';
+        card.textContent = 'Drake liebt dich';
+        ageCards.appendChild(card);
+
+    } else if (age >= 10) {
+        resultMessage.textContent = 'du bist 10 oder älter';
+        resultMessage.style.color = 'green';
+        // Add a card for age 18 to 19
+        const card = document.createElement('div');
+        card.className = 'age-card';
+        card.textContent = 'fick deine mutter';
+        ageCards.appendChild(card);
+
+
     } else {
         resultMessage.textContent = 'Du bist unter 18 Jahre alt. Du bist zu jung für diese Website.';
         resultMessage.style.color = 'red';
